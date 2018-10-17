@@ -1,12 +1,22 @@
 #include <stdio.h>
-#include <string.h>
-int
+#include <stdlib.h>
 
-extern 
-int main()
+extern char **environ;
+
+int main(int argc, char **argv)
 {
+	char *p = NULL;
+	if (argc !=2){
+		printf("usage: ./getenv name\n");
+		return -1;
+	}		
 	
-	RETURN 0;
+	p = getenv(argv[1]);
+	if (p == NULL)
+		printf("no match!\n");
+	else
+		printf("%s\n",p);
+
+	return 0;
 }
-creating a new branch is quick and simple
 
