@@ -5,6 +5,6 @@ extern
 int main()
 {
 	
-	return 0;
+	RETURN 0;
 }
 
